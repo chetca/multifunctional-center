@@ -28,11 +28,11 @@
     max-width: 350px;
     margin: 50px auto 0;
     padding: 20px;
-    background: #fffdee;
+    background: #f0eeff;
     border: 10px solid transparent;
-    border-image: 10 repeating-linear-gradient(135deg, #C42061, #C42061 10px, transparent 10px, transparent 20px, #FBCFDF 20px, #FBCFDF 30px, transparent 30px, transparent 40px);
+    border-image: 10 repeating-linear-gradient(135deg, #2023c4, #2023c4 10px, transparent 10px, transparent 20px, #456ea1 20px, #456ea1 30px, transparent 30px, transparent 40px);
     font-family: 'Playfair Display';
-    color: #605756;
+    color: #565760;
   }
 
   .form-row {
@@ -61,20 +61,20 @@
   .form-row input[type="submit"] {
     padding: 10px 20px;
     margin-top: 10px;
-    background: #F67CA5;
+    background: #887cf6;
     border-width: 0;
     cursor: pointer;
     outline: none;
     font-family: 'Playfair Display';
     font-size: 13px;
     letter-spacing: 1px;
-    color: #fffdee;
+    color: #eeeeff;
     text-transform: uppercase;
     transition: 1s cubic-bezier(.165, .84, .44, 1);
   }
 
   .form-row input[type=submit]:hover {
-    background: #C42061;
+    background: #c42020;
   }
 
 </style>
