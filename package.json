@@ -1,0 +1,25 @@
+{
+  "name": "multifunctional-center",
+  "version": "1.0.0",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "Alex Chetca <chetca@yandex.ru>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "quasar-cli": "^0.15.14"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
