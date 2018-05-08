@@ -15,8 +15,10 @@
             </div>
             <div class="form-row">
                 <label for="creditcard-input">Бановская карта</label><br/>
-                <input type="text" id="doc-number" name="doc-number" placeholder="Номер карты">
+                <input maxlength="19" pattern="\d*" type="tel" id="card-number" name="card-number" placeholder="Номер карты">
+                <input maxlength="4" pattern="\d*" type="tel" id="card-date" name="card-date" placeholder="ММ / ГГ">
             </div>
+            <p>Сумма скидки: 0% </p>
             <input type="submit" value="Вход" name="submit" class="input">
         </form>
     </div>
@@ -40,8 +42,8 @@
   }
 
   .form-row input[type="text"],
-  .form-row input[type="email"],
-  .form-row textarea {
+  .form-row input[type="tel"],
+  .form-row input[type="number"] {
     width: 100%;
     padding: 0 10px;
     line-height: 35px;
@@ -74,7 +76,7 @@
   }
 
   .form-row input[type=submit]:hover {
-    background: #c42020;
+    background: #ff0000;
   }
 
 </style>
