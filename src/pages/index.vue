@@ -3,23 +3,23 @@
     <div class="form">
         <form action="#" method="post">
             <div class="form-row">
-                <label for="name-family-input">ФИО</label><br/>
-                <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
-                <input type="text" id="name" name="name" placeholder="Имя" required>
-                <input type="text" id="middlename" name="middlename" placeholder="Отчество" required>
+                <p class="caption">ФИО</p>
+                <q-input v-model="family_surname" float-label="Фамилия" />
+                <q-input v-model="family_name" float-label="Имя" />
+                <q-input v-model="family_middlename" float-label="Отчество" />
             </div>
             <div class="form-row">
-                <label for="document-input">Документ</label><br/>
-                <input type="text" id="doc-serial" name="doc-serial" placeholder="Серия">
-                <input type="text" id="doc-number" name="doc-number" placeholder="Номер">
+                <p class="caption">Документ</p>
+                <q-input v-model="doc_serial" float-label="Серия" />
+                <q-input v-model="doc_number" float-label="Номер" />
             </div>
             <div class="form-row">
-                <label for="creditcard-input">Бановская карта</label><br/>
-                <input maxlength="19" pattern="\d*" type="tel" id="card-number" name="card-number" placeholder="Номер карты">
-                <input maxlength="4" pattern="\d*" type="tel" id="card-date" name="card-date" placeholder="ММ / ГГ">
+                <p class="caption">Бановская карта</p>
+                <q-input v-model="card_number" maxlength="19" type="password" float-label="Номер карты" />
+                <q-input v-model="card_date" maxlength="4" type="text" float-label="ММ / ГГ" />
             </div>
-            <p>Сумма скидки: 0% </p>
-            <input type="submit" value="Вход" name="submit" class="input">
+            <p class="caption">Сумма скидки: {{ discount }}%</p>
+            <q-btn glossy color="primary" label="Вход" />
         </form>
     </div>
   </q-page>
@@ -27,7 +27,8 @@
 
 <style>
   .form {
-    max-width: 350px;
+    width: 350px;
+    max-width: 400px;
     margin: 50px auto 0;
     padding: 20px;
     background: #f0eeff;
@@ -36,55 +37,25 @@
     font-family: 'Playfair Display';
     color: #565760;
   }
-
-  .form-row {
-    margin-bottom: 15px;
-  }
-
-  .form-row input[type="text"],
-  .form-row input[type="tel"],
-  .form-row input[type="number"] {
-    width: 100%;
-    padding: 0 10px;
-    line-height: 35px;
-    border-width: 0;
-    outline: none;
-    background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
-    background-size: 8px 35px;
-    font-family: 'Playfair Display';
-  }
-
-  .form-row textarea {
-    background-attachment: local;
-    background-repeat: repeat;
-    resize: none;
-  }
-
-  .form-row input[type="submit"] {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: #887cf6;
-    border-width: 0;
-    cursor: pointer;
-    outline: none;
-    font-family: 'Playfair Display';
-    font-size: 13px;
-    letter-spacing: 1px;
-    color: #eeeeff;
-    text-transform: uppercase;
-    transition: 1s cubic-bezier(.165, .84, .44, 1);
-  }
-
-  .form-row input[type=submit]:hover {
-    background: #ff0000;
-  }
-
 </style>
 
 
 
 <script>
 export default {
-  name: 'PageIndex'
+  name: 'PageIndex',
+  data () {
+    return {
+      text: '',
+      family_surname: '',
+      family_name: '',
+      family_middlename: '',
+      doc_serial: '',
+      doc_number: '',
+      card_number: '',
+      card_date: '',
+      discount: 666
+    }
+  }
 }
 </script>
