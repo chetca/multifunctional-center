@@ -1,25 +1,25 @@
 <template>
   <q-page class="flex flex-center">
     <div class="form">
-        <form action="#" method="post">
+        <form action="adduser.php" method="post">
             <div class="form-row">
                 <p class="caption">ФИО</p>
-                <q-input v-model="family_surname" float-label="Фамилия" />
-                <q-input v-model="family_name" float-label="Имя" />
-                <q-input v-model="family_middlename" float-label="Отчество" />
+                <q-input v-model="family_surname" name="family_surname" float-label="Фамилия" />
+                <q-input v-model="family_name" name="family_name" float-label="Имя" />
+                <q-input v-model="family_middlename" name="family_middlename" float-label="Отчество" />
             </div>
             <div class="form-row">
                 <p class="caption">Документ</p>
-                <q-input v-model="doc_serial" float-label="Серия" />
-                <q-input v-model="doc_number" float-label="Номер" />
+                <q-input v-model="doc_serial" name="doc_serial" float-label="Серия" />
+                <q-input v-model="doc_number" name="doc_number" float-label="Номер" />
             </div>
             <div class="form-row">
                 <p class="caption">Бановская карта</p>
-                <q-input v-model="card_number" maxlength="19" type="password" float-label="Номер карты" />
-                <q-input v-model="card_date" maxlength="4" type="text" float-label="ММ / ГГ" />
+                <q-input v-model="card_number" name="card_number" maxlength="19" type="password" float-label="Номер карты" />
+                <q-input v-model="card_date" name="card_date" maxlength="4" type="text" float-label="ММ / ГГ" />
             </div>
             <p class="caption">Сумма скидки: {{ discount }}%</p>
-            <q-btn glossy color="primary" label="Вход" />
+            <q-btn glossy color="primary" name="submit" label="Вход" />
         </form>
     </div>
   </q-page>
