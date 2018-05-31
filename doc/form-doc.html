@@ -75,6 +75,12 @@
         font-size: large;
     }
 
+    @media print {
+        .next-page {
+            page-break-before: always;
+        }
+    }
+
 </style>
 <!--
 
@@ -142,7 +148,7 @@
 <p class="line line-left"><br/></p>
 <br/>
 
-<p class="form-text">Прошу предоставить мне:</p>
+<p class="form-text next-page">Прошу предоставить мне:</p>
 <dl>
     <dd>
         <table width="541" cellspacing="0" cellpadding="2">
@@ -248,7 +254,7 @@
     </dd>
 </dl>
 <br/>
-<p class="caption">Отметка о регистрации заявления</p>
+<p class="caption next-page">Отметка о регистрации заявления</p>
 <p class="form-text">Данные, указанные в заявлении, соответствуют документу, удостоверяющему личность.</p>
 <p class="form-text">Гражданину разъяснены его права на получение социальных услуг, установленных частью 1 статьи 6.2 Федерального закона от 17 июля 1999 года № 178-ФЗ "О государственной социальной помощи".</p>
 <table width="667" cellspacing="0" cellpadding="2">
@@ -287,7 +293,7 @@
 </table>
 <br/><br/>
 
-<p class="line" align="center">
+<p style="border-top: 1px dashed #000000;" align="center">
     <p class="text-table">(линия отреза)</p>
     <p class="text-table">Уведомление</p>
     <p class="form-text">Заявление гр.</p>
