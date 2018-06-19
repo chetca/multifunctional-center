@@ -51,3 +51,18 @@
 .form-row input[type=submit]:hover {
     background: #ff0000;
 }
+
+.card-table {
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 20px;
+    background: #f0eeff;
+    border: 10px solid transparent;
+    border-image: 10 repeating-linear-gradient(135deg, #2023c4, #2023c4 10px, transparent 10px, transparent 20px, #456ea1 20px, #456ea1 30px, transparent 30px, transparent 40px);
+    font-family: 'Playfair Display';
+    color: #565760;
+}
+
+.text-center {
+    text-align: center;
+}

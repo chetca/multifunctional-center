@@ -12,7 +12,7 @@
 			{
 				//если пароль совпадает, то нужно авторизовать пользователя
 				$_SESSION['logged_user'] = $user;
-				header('Location:/');
+				echo "<script>window.location.href='/'</script>";
 			}else
 			{
 				$errors[] = 'Неверно введен пароль!';

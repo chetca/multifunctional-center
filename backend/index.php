@@ -2,7 +2,7 @@
 require_once 'app/header.php';
 require 'db.php';
 if ( !isset ($_SESSION['logged_user']) ) {
-    header('Location: /login.php');
+    echo "<script>window.location.href='/login.php'</script>";
 } 
 ?>
     <div class="form">
@@ -23,12 +23,14 @@ if ( !isset ($_SESSION['logged_user']) ) {
             </div>
             <div class="form-row">
                 <label for="creditcard-input">Банковская карта</label><br/>
-                <input maxlength="30" pattern="\d*" type="tel" id="card_number" name="card_number" placeholder="Номер карты">
-                <input maxlength="4" pattern="\d*" type="tel" id="card_date" name="card_date" placeholder="ММ / ГГ">
+                <input maxlength="30" pattern="\d*" type="text" id="card_number" name="card_number" placeholder="Номер карты">
+                <input maxlength="5" pattern="\d*" type="text" id="card_date" name="card_date" placeholder="ММ / ГГ">
             </div>
-            <p><input name="discount_type" type="radio" value="0" checked>Скидка по документу</p>
-            <p><input name="discount_type" type="radio" value="1">Скидка по карте</p>
-            <input type="submit" value="Вход" name="submit" class="input">
+            <p><input name="discount_type" type="radio" value="0" checked>Срок по документу</p>
+            <p><input name="discount_type" type="radio" value="1">Срок по карте</p>
+            <p>Сумма скидки: <input type="number" id="discount" name="discount" >% </p>
+            <input type="submit" value="Подтвердить" name="submit" class="input">
+            <a href="admin.php">Список карт</a>
         </form>
     </div>
     </body>
@@ -46,6 +48,7 @@ if( isset( $_POST["submit"] ) ) {
     $new_user->card_number = $_POST["card_number"];
     $new_user->card_date = $_POST["card_date"];
     $new_user->discount_type = $_POST["discount_type"];
+    $new_user->discount = $_POST["discount"];
     R::store($new_user);
     echo "<script>alert('Спасибо, Ваши данные сохранены');</script>";
     echo "<script>window.location.href='/'</script>";

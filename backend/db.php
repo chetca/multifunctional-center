@@ -1,6 +1,6 @@
 <?php 
 require 'libs/rb.php';
-R::setup( 'mysql:host=127.0.0.1;dbname=antari_mfc_test','root', '' ); 
+R::setup( 'mysql:host=localhost;dbname=antari_mfc_test','antari_mfc_test', 'Ri&oRCw5' ); 
 
 if ( !R::testconnection() )
 {
